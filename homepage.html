@@ -1,0 +1,160 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Data Visualizations</title>
+
+  <!-- Flourish embed script -->
+  <script src="https://public.flourish.studio/resources/embed.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f5;
+      color: #222;
+    }
+
+    .page {
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* Visualization grid */
+    .visualizations {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    /* Individual cards */
+    .viz-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .viz-card h2 {
+      margin: 0 0 12px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    /* Flourish containers */
+    .flourish-embed {
+      width: 100%;
+      height: 360px;
+      flex: 1;
+    }
+
+    /* Tablet */
+    @media (max-width: 1100px) {
+      .visualizations {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      body {
+        padding: 20px;
+      }
+
+      .visualizations {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .flourish-embed {
+        height: 420px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <header class="header">
+      <h1>Data Visualizations</h1>
+      <p class="subtitle">
+        Interactive visualizations exploring my experiences, interests, and data
+      </p>
+    </header>
+
+    <section class="visualizations">
+
+      <!-- Visualization 1: Map -->
+      <article class="viz-card">
+        <h2>Places I've Lived & Traveled</h2>
+
+        <div
+          class="flourish-embed flourish-map"
+          data-src="visualisation/30170511">
+        </div>
+      </article>
+
+
+      <!-- Visualization 2: Network -->
+      <article class="viz-card">
+        <h2>My Connections</h2>
+
+        <div
+          class="flourish-embed flourish-network"
+          data-src="visualisation/30152485">
+        </div>
+      </article>
+
+
+      <!-- Visualization 3: Chart -->
+      <article class="viz-card">
+        <h2>My Data</h2>
+
+        <div
+          class="flourish-embed flourish-chart"
+          data-src="visualisation/30170495">
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+```
